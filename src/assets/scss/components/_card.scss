@@ -1,0 +1,15 @@
+.card {
+    @apply rounded;
+
+    &.border-large {
+        @apply rounded-lg;
+    }
+
+    &.primary {
+        @apply bg-primary;
+    }
+
+    &.white {
+        @apply bg-white;
+    }
+}
