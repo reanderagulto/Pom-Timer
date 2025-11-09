@@ -3,10 +3,11 @@ import React from 'react'
 const Card = ({
     children, 
     color = "",
-    border = ""
+    border = "none",
+    className = ""
 }) => {
     return (
-        <div className={`card ${color} ${border}`}>
+        <div className={`card ${color} border-${border} ${className}`}>
             {children}
         </div>
     )

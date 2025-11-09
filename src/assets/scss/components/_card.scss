@@ -1,8 +1,16 @@
 .card {
-    @apply rounded;
+    @apply rounded p-[25px] md:p-[50px];
+
+    &.boxed {
+        @apply rounded-none;
+    }
 
     &.border-large {
-        @apply rounded-lg;
+        @apply rounded-lg border-[4px] border-black;
+    }
+
+    &.border-small {
+        @apply rounded border-[3px] border-black;
     }
 
     &.primary {
@@ -11,5 +19,9 @@
 
     &.white {
         @apply bg-white;
+    }
+
+    &.gray {
+        @apply bg-dark-gray;
     }
 }

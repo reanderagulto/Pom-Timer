@@ -1,2 +1,7 @@
 // Base Partials
 @use './base/base';
+
+// Components
+@use './components/button';
+@use './components/card';
+@use './components/timer';

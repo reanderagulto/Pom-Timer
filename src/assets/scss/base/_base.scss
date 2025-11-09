@@ -1,3 +1,7 @@
 body {
     @apply bg-tertiary font-robotoMono h-[100vh] flex items-center justify-center;
 }
+
+.main-card {
+    @apply w-[90%] md:w-[38.889vw] mx-auto;
+}

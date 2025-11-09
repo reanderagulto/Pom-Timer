@@ -15,6 +15,7 @@ export default {
                 'tertiary': '#C36868',
                 'black': '#000000',
                 'white': '#FFFFFF',
+                'dark-gray': '#323232'
             },
             fontSize: {
                 'sm': ['1rem', {lineHeight: 'normal', fontWeight: '400'}],
@@ -24,7 +25,8 @@ export default {
             },
             borderRadius: {
                 DEFAULT: '1.25rem',
-                'lg': '1.5rem'
+                'lg': '1.5rem',
+                'sm': '12px'
             },
         },
     },

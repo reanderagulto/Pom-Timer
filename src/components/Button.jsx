@@ -4,13 +4,14 @@ const Button = ({
     label,
     onClick,
     type = 'button',
+    className = '',
     children,
 }) => {
   return (
     <button 
         type={type} 
         onClick={onClick} 
-        className="bg-primary text-black font-robotoMono px-4 py-2 rounded hover:bg-secondary transition"
+        className={`btn ${className}`}
     >
       {label || children}
     </button>

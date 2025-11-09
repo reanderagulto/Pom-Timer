@@ -1,0 +1,11 @@
+.btn {
+    @apply bg-primary text-black font-robotoMono px-4 py-2 rounded-sm hover:bg-secondary transition;  
+    
+    &.secondary {
+        @apply bg-secondary;
+    }
+
+    &.outlined {
+        @apply bg-transparent border-black border-[1px] hover:bg-tertiary hover:text-white hover:border-white;
+    }
+}

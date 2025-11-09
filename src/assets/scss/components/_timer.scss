@@ -1,0 +1,41 @@
+.timer {
+    &__header {
+        @apply text-[24px] font-semibold uppercase;
+    }
+
+    &__time {
+        @apply text-[32px] md:text-[6.25vw] font-bold leading-[92.9%] mb-8;
+    }
+
+    &__button-wrapper {
+        @apply flex flex-wrap items-center justify-center gap-[10px];
+    }
+
+    &__controls {
+        @apply md:mt-[50px] mt-8 flex flex-wrap items-stretch justify-between gap-[14px] md:gap-[4.167vw];
+
+        &--header {
+            @apply text-[24px] text-white mt-[10px];
+        }
+
+        &--breaks {
+            @apply px-[10px] py-[14px] flex-grow;
+        }
+
+        &--screen {
+            @apply px-5 py-0 h-auto md:h-[80px] flex items-center justify-center;
+
+            .breaks-screen {
+                @apply flex items-center justify-center flex-grow gap-5 md:gap-8;
+            }
+
+            .break-control {
+                @apply text-white text-[30px] md:text-[48px] cursor-pointer;
+            }
+
+            .break-times {
+                @apply text-[24px] md:text-[32px] text-black;
+            }
+        }
+    }
+}
