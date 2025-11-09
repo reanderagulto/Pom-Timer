@@ -15,7 +15,7 @@
         @apply md:mt-[50px] mt-8 flex flex-wrap items-stretch justify-between gap-[14px] md:gap-[4.167vw];
 
         &--header {
-            @apply text-[24px] text-white mt-[10px];
+            @apply text-[24px] text-white mt-[10px] text-center;
         }
 
         &--breaks {

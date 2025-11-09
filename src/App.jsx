@@ -7,9 +7,46 @@ import {
 import Card from './components/Card'
 import Button from './components/Button';
 
+const ACTION_TYPES = {
+    BREAK: 'break',
+    LENGTH: 'length'
+}
+
+const ACTIONS = {
+    INCREMENT: 'increment',
+    DECREMENT: 'decrement'
+}
+
+const DEFAULT_VALUES = {
+    BREAK: 5,
+    LENGTH: 25
+}
+
+function reducer(state, action) {
+    switch(action.type) {
+        case ACTIONS.INCREMENT:
+            return { count: state.count + 5 }
+        case ACTIONS.DECREMENT:
+            return { count: state.count - 5 }
+        default:
+            return state
+    }
+}
+
 function App() {
-    const [defaultTime, setDefaultTime] = useState();
-    const [count, setCount] = useState(0)
+    const [timerState, dispatch] = useReducer(reducer, { count: 5 });
+
+    const increment = (type) => {
+        dispatch( { type: ACTIONS.INCREMENT } )   
+    }
+
+    const decrement = (type) => {
+        const limit = type === ACTION_TYPES.BREAK ? DEFAULT_VALUES.BREAK : DEFAULT_VALUES.LENGTH;
+
+        if(timerState.count > DEFAULT_VALUES.BREAK) {
+            dispatch( { type: ACTIONS.DECREMENT } )   
+        }
+    }
 
     return (
         <Card 
@@ -48,9 +85,19 @@ function App() {
                         className="boxed timer__controls--screen"
                     >
                         <div className="breaks-screen">
-                            <span className="break-control">-</span>
-                            <span className="break-times">5</span>
-                            <span className="break-control">+</span>
+                            <span 
+                                className="break-control" 
+                                onClick={() => decrement(ACTION_TYPES.BREAK)}
+                            >
+                                -
+                            </span>
+                            <span className="break-times">{timerState.count}</span>
+                            <span 
+                                className="break-control" 
+                                onClick={() => increment(ACTION_TYPES.BREAK)}
+                            >
+                                +
+                            </span>
                         </div>
                     </Card>
                     <div className="timer__controls--header">
